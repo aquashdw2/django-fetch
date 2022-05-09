@@ -1,12 +1,11 @@
 async function readLorem(){
-    let postListDiv = document.querySelector("#post-list");
-    postListDiv.children = [];
-
+    let postListDiv = document.querySelector("#post-list");        
+    postListDiv.innerHTML = "";
+    
     try{
         let response = await fetch("/post/lorem/");
         if(response.status == 200) {
             let jsonBody = await response.json();
-            
             let postElementTitle = document.createElement("h3");
             let postElementContent = document.createElement("p");
     
