@@ -1,0 +1,22 @@
+#post-list-container { 
+    width: 30vw;
+}
+
+#post-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#post-refresh-button {
+    height: min-content;
+}
+
+p {
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 5.4em;
+    line-height: 1.8em;
+}

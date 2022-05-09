@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="/static/blog/styles.css" rel="stylesheet"/>
+    <script src="/static/blog/scripts.js"></script>
+</head>
+<body>
+    
+    <input id="post-title" placeholder="제목" /><br>
+    <textarea id="post-content" placeholder="본문"></textarea><br>
+    <button id="post-create-button" onclick="createPostRequest()">글 추가하기</button>
+    <div id="post-list-container">
+        <div id="post-list-header">
+            <h2>글 목록</h2>
+            <button id="post-refresh-button" onclick="readLorem()">새로고침</button>
+        </div>
+        <div id="post-list">
+            
+        </div>
+    </div>
+</body>
+</html>
