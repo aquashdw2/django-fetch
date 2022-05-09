@@ -1,23 +1,28 @@
 async function readLorem(){
+    let postListDiv = document.querySelector("#post-list");
     postListDiv.children = [];
+
+    try{
+        let response = await fetch("/post/lorem/");
+        if(response.status == 200) {
+            let jsonBody = await response.json();
+            
+            let postElementTitle = document.createElement("h3");
+            let postElementContent = document.createElement("p");
     
-    let response = await fetch("/post/lorem/");
-    if(response.status == 200) {
-        let jsonBody = await response.json();
-        let postListDiv = document.querySelector("#post-list");
-        
-        let postElementTitle = document.createElement("h3");
-        let postElementContent = document.createElement("p");
-
-        postElementTitle.textContent = jsonBody.title;
-        postElementContent.textContent = jsonBody.content;
-
-        let postElement = document.createElement("div");
-        postElement.appendChild(postElementTitle);
-        postElement.appendChild(postElementContent);
-        postListDiv.appendChild(postElement);
-        
+            postElementTitle.textContent = jsonBody.title;
+            postElementContent.textContent = jsonBody.content;
+    
+            let postElement = document.createElement("div");
+            postElement.appendChild(postElementTitle);
+            postElement.appendChild(postElementContent);
+            postListDiv.appendChild(postElement);
+            
+        }
+    } catch (error) {
+        alert(error);
     }
+    
 }
 
 

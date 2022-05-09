@@ -10,7 +10,7 @@ def index(request):
 
 
 def read_lorem(request):
-    time.sleep(1)
+    time.sleep(2)
     content = {
         "title": "Lorem Ipsum",
         "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi suscipit, illo magnam distinctio repellat, porro cum veniam vitae alias id odio officia ea laborum quo. Exercitationem doloremque placeat provident commodi?"
